@@ -1,0 +1,50 @@
+<html>
+<head>
+    
+<script language="JavaScript">
+var srcList = ["images/images/imgAnim/img0.jpg", 
+               "images/images/imgAnim/img1.jpg", 
+               "images/images/imgAnim/img2.jpg", 
+               "images/images/imgAnim/img3.jpg",  
+               "images/images/imgAnim/img4.jpg",  
+               "images/images/imgAnim/img5.jpg",  
+               "images/images/imgAnim/img6.jpg",  
+               "images/images/imgAnim/img7.jpg",
+               "images/images/imgAnim/img8.jpg",
+               "images/images/imgAnim/img9.jpg",
+               "images/images/imgAnim/img10.jpg" ];		   
+var index = 0;
+var loopCount = 0;
+
+
+function begin()
+{
+	index = index +1;
+// my list has 10 elements, so the last element is
+// at index 9
+if( index > 9) // larger than 9 will error.
+{
+    index = 0;
+}
+document.getElementById("myPic").src = srcList[index];
+
+setTimeout("begin()", 700);
+
+}
+</script>
+</head>
+    
+    <p>Click here to <a href="index.html">return to my home page. </a>
+<br/><br/>
+    
+<body>
+<center>
+<h1>this is a flamingo website</h1>
+<img id="myPic" src="images/images/imgAnim/img0.jpg" width="700"/>
+
+<br/><br/>
+<input type="button" value="Start!" onclick="begin()">
+
+</center>
+</body>
+</html>
